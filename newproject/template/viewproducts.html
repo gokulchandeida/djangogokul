@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>View Products Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-expand sm" style="background-color: rgba(5, 0, 9, 0.922);">
+        <a class="navbar-brand" style="color:white;" href="http://eida.co.in">EIDA</a>
+        <ul class="na-bar nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: white;" href="viewproducts"> View Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="addproducts"> Add Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="updateproduct"> Update Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="support"> Get Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color:white;" href="profile"> My Profile</a>
+            </li>
+        </ul>
+
+    </nav>
+    <br><br>
+
+    <div class="container-fluid">
+        <h3> View Products</h3><br>
+        <div class="row">
+
+            {% for i in d %}
+
+
+
+
+            <div class="col-sm-4 col-sm-4 col-sm-4">
+                <div class="card">
+                    <img class="card-image-top" src="{{i.productimg.url}}" width="250" height="200"><br>
+                    <div class="card-body">
+                        <h4 class="card-title">{{i.productname}}</h4>
+                        <p class="card-text"> {{i.productdes}}</p>
+                        <p class="card-text">Rs {{i.price}}</p><br>
+                        {% if i in l %}
+                        <a href="" class="btn btn-primary" width="15" height="20"> Buy Now</a>
+                        <!-- <a href="https://amazon.com" class="btn btn-primary" width="15" height="20"> Add to
+                                cart</a> -->
+                        <a href="cartdisplay.html" class="btn btn-primary" width="15" height="20">Go to
+                            Cart</a>
+                        {% else %}
+                        <a href="" class="btn btn-primary" width="15" height="20"> Buy Now</a>
+                        <!-- <a href="https://amazon.com" class="btn btn-primary" width="15" height="20"> Add to
+                                cart</a> -->
+                        <a href="cart/{{i.pk}}" class="btn btn-primary" width="15" height="20">Add to
+                            Cart</a>
+                        {% endif %}
+                        <br><br>
+                        <a href="updateproduct/update/{{i.pk}}" class="btn btn-primary" width="15" height="20">
+                            Update Product</a><br><br>
+                        <a href="updateproduct/delete/{{i.pk}}" class="btn btn-primary" width="15" height="20">
+                            Delete
+                            Product</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
