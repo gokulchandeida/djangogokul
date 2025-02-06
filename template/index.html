@@ -1,0 +1,1678 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hmart – Latest gadgets at your doorstep</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Hmart-Latest gadgets at your doorstep">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}" />
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %} " />
+    <link rel="stylesheet" href="{% static 'assets/css/font.awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/pe-icon-7-stroke.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/venobox.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.min.css' %}">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Minify Version -->
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header>
+            <!-- Header top area start -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col">
+                            <div class="welcome-text">
+                                <p>Find Latest Gadgets Only At Hmart</p>
+                            </div>
+                        </div>
+                        <div class="col d-none d-lg-block">
+                            <div class="top-nav">
+                                <ul>
+                                    <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +91 9611767839</a></li>
+                                    <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i>
+                                            support@hmart.com</a></li>
+                                    {% if request.session.user %}
+                                    <li><a href="logout"><i class="fa fa-user"></i> Logout</a></li>
+                                    {% else %}
+                                    <li><a href="login"><i class="fa fa-user"></i> Login/Register</a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header top area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom  d-none d-lg-block">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="{% static 'assets/images/logo/logo.png' %}"
+                                        alt="Site Logo" /></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+
+                                </a>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-cart"
+                                    class="header-action-btn header-action-btn-cart offcanvas-toggle pr-0">
+                                    <i class="pe-7s-shopbag"></i>
+
+                                </a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+            <!-- Header action area start -->
+            <div class="header-bottom d-lg-none sticky-nav style-1">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-3 col">
+                            <div class="header-logo">
+                                <a href=""><img src="{% static 'assets/images/logo/logo.png' %}" alt="Site Logo" /></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col">
+                            <div class="header-actions">
+                                <!-- Single Wedge Start -->
+                                <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+                                </a>
+                                <!-- Single Wedge End -->
+                                <a href="#offcanvas-wishlist" class="header-action-btn offcanvas-toggle">
+                                    <i class="pe-7s-like"></i>
+
+                                </a>
+                                <a href="#offcanvas-mobile-menu"
+                                    class="header-action-btn header-action-btn-menu offcanvas-toggle d-lg-none">
+                                    <i class="pe-7s-menu"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header action area end -->
+
+
+
+
+            <!-- header navigation area start -->
+            <div class="header-nav-area d-none d-lg-block sticky-nav">
+                <div class="container">
+                    <div class="header-nav">
+                        <div class="main-menu position-relative">
+                            <ul>
+                                <li><a href="">Home <i class="fa fa-angle-down"></i></a>
+
+                                </li>
+
+                                <li class="dropdown position-static"><a href="">Mobiles, Tablets & Computers <i
+                                            class="fa fa-angle-down"></i></a>
+                                    <ul class="mega-menu d-block">
+                                        <li class="d-flex">
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Mobiles</a></li>
+                                                <li><a href="basic-phones">Basic
+                                                        Mobiles</a></li>
+                                                <li><a href="smart-phones">Smart
+                                                        Phones</a></li>
+
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Tablets</a></li>
+                                                <li><a href="wifi-tablets">Wifi Tablets</a></li>
+                                                <li><a href="sim-tablet"> Sim Tablets</a></li>
+                                                <li><a href="pos-tablet">POS Tablets</a></li>
+
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Computers</a></li>
+                                                <li><a href="laptop">Laptops</a></li>
+                                                <li><a href="desktop">Desktops</a></li>
+                                                <li><a href="all-in-one">All in One</a></li>
+                                                <li><a href="servers">Servers</a></li>
+
+                                            </ul>
+                                            <ul
+                                                class="d-flex align-items-center p-0 border-0 flex-column justify-content-center">
+                                                <li>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img
+                                                            class="img-responsive w-100"
+                                                            src="{% static 'assets/images/banner/menu-banner.png' %}"
+                                                            alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown position-static"><a href="">TV, Audio & Gadgets <i
+                                            class="fa fa-angle-down"></i></a>
+                                    <ul class="mega-menu d-block">
+                                        <li class="d-flex">
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">TV</a></li>
+                                                <li><a href="standard-tv">Standard TV</a></li>
+                                                <li><a href="smart-tv">Smart TV</a></li>
+
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Audio</a></li>
+                                                <li><a href="headphones">Headphones</a></li>
+                                                <li><a href="speakers">Speakers</a></li>
+                                                <li><a href="amplifiers">Amplifiers</a></li>
+
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Gadgets</a></li>
+                                                <li><a href="wearables">Wearable</a></li>
+                                                <li><a href="smart-home">Smart Home</a></li>
+                                                <li><a href="smart-office">Smart Office</a></li>
+                                                <li><a href="security">Security</a></li>
+
+                                            </ul>
+                                            <ul
+                                                class="d-flex align-items-center p-0 border-0 flex-column justify-content-center">
+                                                <li>
+                                                    <a class="p-0" href="shop-left-sidebar.html"><img
+                                                            class="img-responsive w-100"
+                                                            src="{% static 'assets/images/banner/menu-banner.png' %}"
+                                                            alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown position-static"><a href="#">Accessories <i
+                                            class="fa fa-angle-down"></i></a>
+                                    <ul class="mega-menu d-block">
+                                        <li class="d-flex">
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Mobile</a></li>
+                                                <li><a href="mobile-chargers">Chargers</a></li>
+                                                <li><a href="mobile-screen-guards">Screen Guards</a></li>
+                                                <li><a href="mobile-covers">Covers</a></li>
+                                                <li><a href="battery-bank">Battery Banks</a></li>
+                                                <li><a href="mobile-headset">Headset</a>
+                                                </li>
+                                                <li><a href="selfie-stick">Selfie Stick</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Tablet</a></li>
+                                                <li><a href="tablet-covers">Covers</a></li>
+                                                <li><a href="tablet-stand">Stand</a></li>
+                                                <li><a href="stylus-pen">Stylus Pen</a></li>
+                                                <li><a href="tablet-screen-guard">Screen Guards</a></li>
+                                                <li><a href="data-card">Data Cards</a></li>
+                                                <li><a href="tablet-keyboards">Keyboard</a></li>
+                                            </ul>
+                                            <ul class="d-block">
+                                                <li class="title"><a href="#">Computer Accessories</a></li>
+                                                <li><a href="chargers-cables-pc">Chargers & Cables</a></li>
+                                                <li><a href="keyboards">Keyboards</a>
+                                                <li><a href="mouse">Mouse</a> </li>
+                                                <li><a href="hubs-ports">Hubs & Ports</a>
+                                                </li>
+                                                <li><a href="webcam">Webcams</a>
+                                                </li>
+                                                <li><a href="ups">UPS</a></li>
+                                            </ul>
+                                            <ul class="d-block p-0 border-0">
+                                                <li class="title"><a href="#">Computer Peripherals</a></li>
+                                                <li><a href="monitor">Monitor</a></li>
+                                                <li><a href="hard-disk">Hard Disk</a></li>
+                                                <li><a href="graphics-card">Graphics Card</a></li>
+                                                <li><a href="components">Components</a></li>
+                                                <li><a href="wifi-routers">Wifi Routers</a></li>
+                                                <li><a href="printers">Printers</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header navigation area end -->
+            <div class="mobile-search-box d-lg-none">
+                <div class="container">
+                    <!-- mobile search start -->
+                    <div class="search-element max-width-100">
+                        <form action="#">
+                            <input type="text" placeholder="Search" />
+                            <button><i class="pe-7s-search"></i></button>
+                        </form>
+                    </div>
+                    <!-- mobile search start -->
+                </div>
+            </div>
+        </header>
+        <!-- offcanvas overlay start -->
+        <div class="offcanvas-overlay"></div>
+        <!-- offcanvas overlay end -->
+        <!-- OffCanvas Wishlist Start -->
+        <div id="offcanvas-wishlist" class="offcanvas offcanvas-wishlist">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Wishlist</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+
+                <div class="foot">
+                    <div class="buttons">
+                        <a href="{% url 'wishlist' %}" class="btn btn-dark btn-hover-primary mt-30px">View Wishlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Wishlist End -->
+        <!-- OffCanvas Cart Start -->
+        <div id="offcanvas-cart" class="offcanvas offcanvas-cart">
+            <div class="inner">
+                <div class="head">
+                    <span class="title">Cart</span>
+                    <button class="offcanvas-close">×</button>
+                </div>
+                <!-- incase if you want to add cart items -->
+                <div class="foot">
+                    <div class="buttons">
+                        <a href="{% url 'cart_dis' %}" class="btn btn-dark btn-hover-primary mt-30px">View Cart</a>
+                        <a href="{% url 'checkout' %}" class="btn btn-outline-dark current-btn">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OffCanvas Cart End -->
+        <!-- OffCanvas Menu Start -->
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <button class="offcanvas-close"></button>
+            <div class="user-panel">
+                <ul>
+                    <li><a href="tel:0123456789"><i class="fa fa-phone"></i> +91 9611767839</a></li>
+                    <li><a href="mailto:demo@example.com"><i class="fa fa-envelope-o"></i> support@hmart.com</a></li>
+                    <li><a href="my-account.html"><i class="fa fa-user"></i> Account</a></li>
+                </ul>
+            </div>
+            <!-- <div class="inner customScroll">
+                <div class="offcanvas-menu mb-4">
+                    <ul>
+                        <li><a href=""><span class="menu-text">Home</span></a>
+
+                        </li>
+
+                        <li>
+                            <a href="#"><span class="menu-text">Pages</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#"><span class="menu-text">Inner Pages</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="404.html">404 Page</a></li>
+                                        <li><a href="order-tracking.html">Order Tracking</a></li>
+                                        <li><a href="faq.html">Faq Page</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text"> Other Shop Pages</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="cart.html">Cart Page</a></li>
+                                        <li><a href="checkout.html">Checkout Page</a></li>
+                                        <li><a href="compare.html">Compare Page</a></li>
+                                        <li><a href="wishlist.html">Wishlist Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">Related Shop Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="my-account.html">Account Page</a></li>
+                                        <li><a href="login.html">Login & Register Page</a></li>
+                                        <li><a href="empty-cart.html">Empty Cart Page</a></li>
+                                        <li><a href="thank-you-page.html">Thank You Page</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="menu-text">Shop</span></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="#"><span class="menu-text">Shop Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop-3-column.html">Shop 3 Column</a></li>
+                                        <li><a href="shop-4-column.html">Shop 4 Column</a></li>
+                                        <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
+                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                        <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>
+                                        </li>
+                                        <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a>
+                                        </li>
+                                        <li><a href="cart.html">Cart Page</a></li>
+                                        <li><a href="checkout.html">Checkout Page</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">product Details Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="single-product.html">Product Single</a></li>
+                                        <li><a href="single-product-variable.html">Product Variable</a></li>
+                                        <li><a href="single-product-affiliate.html">Product Affiliate</a></li>
+                                        <li><a href="single-product-group.html">Product Group</a></li>
+                                        <li><a href="single-product-tabstyle-2.html">Product Tab 2</a></li>
+                                        <li><a href="single-product-tabstyle-3.html">Product Tab 3</a></li>
+                                        <li><a href="single-product-slider.html">Product Slider</a></li>
+                                        <li><a href="single-product-gallery-left.html">Product Gallery Left</a>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="menu-text">Single Product Page</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="single-product-gallery-right.html">Product Gallery
+                                                Right</a> </li>
+                                        <li><a href="single-product-sticky-left.html">Product Sticky Left</a>
+                                        </li>
+                                        <li><a href="single-product-sticky-right.html">Product Sticky Right</a>
+                                        </li>
+                                        <li><a href="compare.html">Compare Page</a></li>
+                                        <li><a href="wishlist.html">Wishlist Page</a></li>
+                                        <li><a href="my-account.html">Account Page</a></li>
+                                        <li><a href="login.html">Login & Register Page</a></li>
+                                        <li><a href="empty-cart.html">Empty Cart Page</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="menu-text">Blog</span></a>
+                            <ul class="sub-menu">
+                                <li><a href="blog-grid.html">Blog Grid Page</a></li>
+                                <li><a href="blog-grid-left-sidebar.html">Grid Left Sidebar</a></li>
+                                <li><a href="blog-grid-right-sidebar.html">Grid Right Sidebar</a></li>
+                                <li><a href="blog-list.html">Blog List Page</a></li>
+                                <li><a href="blog-list-left-sidebar.html">List Left Sidebar</a></li>
+                                <li><a href="blog-list-right-sidebar.html">List Right Sidebar</a></li>
+                                <li><a href="blog-single.html">Blog Single Page</a></li>
+                                <li><a href="blog-single-left-sidebar.html">Single Left Sidebar</a></li>
+                                <li><a href="blog-single-right-sidebar.html">Single Right Sidbar</a>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div> -->
+            <!-- OffCanvas Menu End -->
+            <div class="offcanvas-social mt-auto">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- OffCanvas Menu End -->
+    <!-- Hero/Intro Slider Start -->
+    <div class="section ">
+        <div class="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
+            <!-- Hero slider Active -->
+            <div class="swiper-wrapper">
+                <!-- Single slider item -->
+                <div class="hero-slide-item slider-height swiper-slide bg-color1"
+                    data-bg-image="{% static 'assets/images/hero/bg/hero1.jpg' %}">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                                <div class="hero-slide-content slider-animated-1">
+                                    <span class="category">Welcome To Hmart</span>
+                                    <h2 class="title-1">Your Home <br>
+                                        Smart Devices & <br>
+                                        Best Solution </h2>
+                                    <a href="shoplist" class="btn btn-primary text-capitalize">Shop
+                                        All Devices</a>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-end">
+                                <div class="show-case">
+                                    <div class="hero-slide-image">
+                                        <img src="" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single slider item -->
+                <div class="hero-slide-item slider-height swiper-slide bg-color1"
+                    data-bg-image="{% static 'assets/images/hero/bg/hero2.jpg' %}">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 align-self-center sm-center-view">
+                                <div class="hero-slide-content slider-animated-1">
+                                    <span class="category">Welcome To Hmart</span>
+                                    <h2 class="title-1">Your Home <br>
+                                        Smart Devices & <br>
+                                        Best Solution </h2>
+                                    <a href="shoplist" class="btn btn-primary text-capitalize">Shop
+                                        All Devices</a>
+                                </div>
+                            </div>
+                            <div
+                                class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-center position-relative align-items-end">
+                                <div class="show-case">
+                                    <div class="hero-slide-image">
+                                        <img src="" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-buttons">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero/Intro Slider End -->
+    <!-- Banner Area Start -->
+    <div class="banner-area style-one pt-100px pb-100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="single-banner nth-child-1">
+                        <img src="{% static 'assets/images/banner/3.webp' %}" alt="">
+                        <div class="banner-content nth-child-1">
+                            <h3 class="title">Smart Watch For <br>
+                                Your Hand</h3>
+                            <span class="category">From Rs 6995</span>
+                            <a href="wearables" class="shop-link"><i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="single-banner nth-child-2 mb-30px mb-lm-30px mt-lm-30px ">
+                        <img src="{% static 'assets/images/banner/4.webp' %}" alt="">
+                        <div class="banner-content nth-child-2">
+                            <h3 class="title">Headphones</h3>
+                            <span class="category">From Rs 599</span>
+                            <a href="mobile-headset" class="shop-link"><i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="single-banner nth-child-2">
+                        <img src="{% static 'assets/images/banner/5.webp' %}" alt="">
+                        <div class="banner-content nth-child-3">
+                            <h3 class="title">Smartphone</h3>
+                            <span class="category">From Rs 12640</span>
+                            <a href="smart-phones" class="shop-link"><i class="fa fa-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Banner Area End -->
+    <!-- Product Area Start -->
+    <div class="product-area pb-100px">
+        <div class="container">
+            <!-- Section Title & Tab Start -->
+            <div class="row">
+                <div class="col-12">
+                    <!-- Tab Start -->
+                    <div class="tab-slider d-md-flex justify-content-md-between align-items-md-center">
+                        <ul class="product-tab-nav nav justify-content-start align-items-center">
+                            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                    data-bs-target="#newarrivals">New Arrivals</button>
+                            </li>
+                            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab"
+                                    data-bs-target="#toprated">Top Rated</button>
+                            </li>
+                            <li class="nav-item"><button class="nav-link" data-bs-toggle="tab"
+                                    data-bs-target="#featured">Featured</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Tab End -->
+                </div>
+            </div>
+            <!-- Section Title & Tab End -->
+            <div class="row">
+                <div class="col">
+                    <div class="tab-content mt-60px">
+                        <!-- 1st tab start -->
+                        <div class="tab-pane fade show active" id="newarrivals">
+                            <div class="row mb-n-30px">
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/17" class="image">
+                                                <img src="media/ipadwifi.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/ipadwifi.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="wifi-tablets">Wifi Tablet</a></span>
+                                            <h5 class="title"><a href="single-product/17">Apple Ipad 10G
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 33900.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/13" class="image">
+                                                <img src="media/realme12pro.jpg" alt="Product" />
+                                                <img class="hover-image" src=media/realme12pro.jpg alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-phones.html">Smart
+                                                    Phones</a></span>
+                                            <h5 class="title"><a href="single-product.html">Realme 12 Pro
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 27960.00 </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/26" class="image">
+                                                <img src="media/acer_aspire_desktop.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/acer_aspire_desktop.jpg"
+                                                    alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="desktop">Desktop</a></span>
+                                            <h5 class="title"><a href="single-product/26">Acer Aspire Desktop
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 69999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/23" class="image">
+                                                <img src="media/macbook.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/macbook.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="laptop">Laptop</a></span>
+                                            <h5 class="title"><a href="single-product/23">Apple Macbook Air
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 107990.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/31" class="image">
+                                                <img src="media/acerallinone.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/acerallinone.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="all-in-one">All In One</a></span>
+                                            <h5 class="title"><a href="single-product/31">Acer Aspire C24
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 54999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/37" class="image">
+                                                <img src="media/boseheadphone.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/boseheadphone.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="headphones">Headphones</a></span>
+                                            <h5 class="title"><a href="single-product/37">Bose QuietComfort
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 27990.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/50" class="image">
+                                                <img src="media/titan_watch.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/titan_watch.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="wearables">Wearables</a></span>
+                                            <h5 class="title"><a href="single-product/50">Titan Crest
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 6995.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">New</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/47" class="image">
+                                                <img src="media/echoshow8.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/echoshow8.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-home">Smart Home</a></span>
+                                            <h5 class="title"><a href="single-product/47">Amazon Echo Show 8
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 10899.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 1st tab end -->
+                        <!-- 2nd tab start -->
+                        <div class="tab-pane fade" id="toprated">
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/14" class="image">
+                                                <img src="media/vivot3x.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/vivot3x.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-phones">Smart Phones</a></span>
+                                            <h5 class="title"><a href="single-product/14">Vivo T3X 5G
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 12640.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/16" class="image">
+                                                <img src="media/realmepadwifi.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/realmepadwifi.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="wifi-tablets">Wifi Tablet</a></span>
+                                            <h5 class="title"><a href="single-product/16">Realme Pad Mini
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 9999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/24" class="image">
+                                                <img src="media/lenovo_v15.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/lenovo_v15.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="laptop">Laptops</a></span>
+                                            <h5 class="title"><a href="single-product/24">Lenovo V15
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 51990.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/32" class="image">
+                                                <img src="media/hpallinone.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/hpallinone.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="all-in-one">All in One</a></span>
+                                            <h5 class="title"><a href="single-product/32">HP All-in-One
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 33490.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/38" class="image">
+                                                <img src="media/marshall.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/marshall.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="headphones">Headphones</a></span>
+                                            <h5 class="title"><a href="single-product/38">Marshall Major IV
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 9999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/49" class="image">
+                                                <img src="media/echoshow10.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/echoshow10.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-home">Smart Home</a></span>
+                                            <h5 class="title"><a href="single-product/49">Amazon Echo Show 10
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 24999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/43" class="image">
+                                                <img src="media/lg_boom.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/lg_boom.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="speakers">Speakers</a></span>
+                                            <h5 class="title"><a href="single-product/43">LG XBOOM RNC7
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 29990.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Hot</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/90" class="image">
+                                                <img src="media/samssd.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/samssd.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="hard-disk">Hard Disk</a></span>
+                                            <h5 class="title"><a href="single-product/90">Samsung T7 Portable SSD
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 9499.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2nd tab end -->
+                        <!-- 3rd tab start -->
+                        <div class="tab-pane fade" id="featured">
+                            <div class="row">
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/15" class="image">
+                                                <img src="media/samsungfold.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/samsungfold.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-phones">Smart Phones</a></span>
+                                            <h5 class="title"><a href="single-product/15">Samsung Galaxy Z Fold 6
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 126788.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/18" class="image">
+                                                <img src="media/samsung_tab_a_wifi.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/samsung_tab_a_wifi.jpg"
+                                                    alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="wifi-tablets">Wifi Tablet</a></span>
+                                            <h5 class="title"><a href="single-product/18">Samsung Galaxy Tab A
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 8999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/25" class="image">
+                                                <img src="media/hoplapg9.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/hoplapg9.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="laptop">Laptop</a></span>
+                                            <h5 class="title"><a href="single-product/25">HP Laptop 255 G9
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 22999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/39" class="image">
+                                                <img src="media/jblheadp.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/jblheadp.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="headphones">Headphones</a></span>
+                                            <h5 class="title"><a href="single-product/39">JBL Tune 510BT
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 2599.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/51" class="image">
+                                                <img src="media/applewatch.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/applewatch.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="wearables">Wearables</a></span>
+                                            <h5 class="title"><a href="single-product/51">Apple Watch 7
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 50900</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/48" class="image">
+                                                <img src="media/ecodot.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/ecodot.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="smart-home">Smart Home</a></span>
+                                            <h5 class="title"><a href="single-product/48">Amazon Echo Dot
+
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 5999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="new">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/95" class="image">
+                                                <img src="media/dellmo.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/dellmo.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="monitor">Monitor</a></span>
+                                            <h5 class="title"><a href="single-product/95">Dell IPS Monitor
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+                                                <span class="new">Rs 11999.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-3 col-md-6 col-sm-6 col-xs-6 mb-30px">
+                                    <!-- Single Prodect -->
+                                    <div class="product">
+                                        <span class="badges">
+                                            <span class="sale">Featured</span>
+                                        </span>
+                                        <div class="thumb">
+                                            <a href="single-product/100" class="image">
+                                                <img src="media/asusrog.jpg" alt="Product" />
+                                                <img class="hover-image" src="media/asusrog.jpg" alt="Product" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <span class="category"><a href="graphics-card">Graphics Card</a></span>
+                                            <h5 class="title"><a href="single-product/100">ASUS Rog Strix
+                                                </a>
+                                            </h5>
+                                            <span class="price">
+
+                                                <span class="new">Rs 98799.00</span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3rd tab end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Area End -->
+    <!-- Fashion Area Start -->
+    <div class="fashion-area" data-bg-image="{% static 'assets\images\hero\5.jpg' %}">
+        <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-12 text-center">
+                    <h2 class="title"> <span>Smart Home</span> With Amazon Smart Devices </h2>
+                    <a href="smart-home" class="btn btn-primary text-capitalize m-auto">Shop All
+                        Devices</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fashion Area End -->
+
+    <!-- Brand area start -->
+    <div class="brand-area pt-100px pb-100px">
+        <div class="container">
+            <div class="brand-slider swiper-container">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="{% static 'assets/images/partner/1.png' %}"
+                                alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="{% static 'assets/images/partner/2.png' %}"
+                                alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="{% static 'assets/images/partner/3.png' %}"
+                                alt="" /></a>
+                    </div>
+                    <div class="swiper-slide brand-slider-item text-center">
+                        <a href="#"><img class=" img-fluid" src="{% static 'assets/images/partner/4.png' %}"
+                                alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand area end -->
+    <!-- Blog area start from here -->
+    <div class="main-blog-area pb-100px">
+        <div class="container">
+            <!-- section title start -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center mb-30px0px">
+                        <h2 class="title">Latest Blog</h2>
+                        <p> There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+            </div>
+            <!-- section title start -->
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 mb-xs-30px">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="blog-single-left-sidebar.html"><img
+                                    src="{% static 'assets/images/blog-image/1.webp' %}" class="img-responsive w-100"
+                                    alt=""></a>
+                        </div>
+                        <div class="blog-text">
+                            <div class="blog-athor-date line-height-1">
+                                <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
+                                    2030</span>
+                                <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                            aria-hidden="true"></i> Wild Nick</a></span>
+                            </div>
+                            <h5 class="blog-heading"><a class="blog-heading-link"
+                                    href="blog-single-left-sidebar.html">10 Quick Tips About Smart Product</a></h5>
+                            <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut
+                                labore</p>
+                            <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+                <div class="col-lg-6 col-sm-6">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="blog-single-left-sidebar.html"><img
+                                    src="{% static 'assets/images/blog-image/2.webp' %}" class="img-responsive w-100"
+                                    alt=""></a>
+                        </div>
+                        <div class="blog-text">
+                            <div class="blog-athor-date line-height-1">
+                                <span class="blog-date"><i class="fa fa-calendar" aria-hidden="true"></i> 27,Jun
+                                    2030</span>
+                                <span><a class="blog-author" href="blog-grid.html"><i class="fa fa-user"
+                                            aria-hidden="true"></i> Oaklee Odom</a></span>
+                            </div>
+                            <h5 class="blog-heading"><a class="blog-heading-link" href="blog-single-left-sidebar.html">5
+                                    Real-Life Lessons About Smart Product</a>
+                            </h5>
+                            <p>Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut
+                                labore</p>
+                            <a href="blog-single-left-sidebar.html" class="btn btn-primary blog-btn"> Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End single blog -->
+            </div>
+        </div>
+    </div>
+    <!-- Blog area end here -->
+    <!-- Footer Area Start -->
+    <div class="footer-area">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Start single blog -->
+                        <div class="col-md-6 col-lg-3 mb-md-30px mb-lm-30px">
+                            <div class="single-wedge">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="{% static 'assets/images/logo/footer-logo.png' %}"
+                                            alt=""></a>
+                                </div>
+                                <p class="about-text">We are Kerala's fastest growing ecommerce platform, delivering
+                                    best gadgets.
+                                </p>
+                                <ul class="link-follow">
+                                    <li>
+                                        <a class="m-0" title="Twitter" target="_blank" rel="noopener noreferrer"
+                                            href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a title="Tumblr" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-tumblr" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="Facebook" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="Instagram" target="_blank" rel="noopener noreferrer" href="#"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <!-- Start single blog -->
+                        <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-60px">
+                            <div class="single-wedge">
+                                <h4 class="footer-herading">Services</h4>
+                                <div class="footer-links">
+                                    <div class="footer-row">
+                                        <ul class="align-items-center">
+                                            <li class="li"><a class="single-link" href="">Home</a></li>
+                                            <li class="li"><a class="single-link" href="shoplist">Shop</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="login">Login/Register</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="my-account.html">My
+                                                    Account</a></li>
+                                            <li class="li"><a class="single-link" href="admin">Backend
+                                                    Login</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <!-- Start single blog -->
+                        <div class="col-md-6 col-lg-3 col-sm-6 mb-lm-30px pl-lg-40px">
+                            <div class="single-wedge">
+                                <h4 class="footer-herading">Top Products</h4>
+                                <div class="footer-links">
+                                    <div class="footer-row">
+                                        <ul class="align-items-center">
+                                            <li class="li"><a class="single-link" href="smart-phones">Smart
+                                                    Phones</a></li>
+                                            <li class="li"><a class="single-link" href="laptop">Laptops</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="wifi-tablets">Wifi
+                                                    Tablets</a>
+                                            </li>
+                                            <li class="li"><a class="single-link" href="sim-tablet">Calling
+                                                    Tablets</a></li>
+                                            <li class="li"><a class="single-link" href="smart-tv">Smart Tv</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                        <!-- Start single blog -->
+                        <div class="col-md-6 col-lg-3 col-sm-12">
+                            <div class="single-wedge">
+                                <h4 class="footer-herading">Contact Info</h4>
+                                <div class="footer-links">
+                                    <!-- News letter area -->
+                                    <p class="address">Address: Hmart Ecommerce</p>
+                                    <p class="phone">Phone/Fax:<a href="tel:9611767839"> 9611767839</a></p>
+                                    <p class="mail">Email:<a href="mailto:info@hmart.com"> info@hmart.com</a>
+                                    </p>
+                                    <p class="Web"><a href="https://hmart.com/"> info@hmart.com</a></p>
+                                    <!-- News letter area  End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End single blog -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="line-shape-top line-height-1">
+                        <div class="row flex-md-row-reverse align-items-center">
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="payment-mth"><a href="#"><img class="img img-fluid"
+                                            src="{% static 'assets/images/icons/payment.png' %}"
+                                            alt="payment-image"></a></div>
+                            </div>
+                            <div class="col-md-6 text-center text-md-start">
+                                <p class="copy-text"> © 2021 <strong>Hmart</strong> Made With <i class="fa fa-heart"
+                                        aria-hidden="true"></i> By <a class="company-name" href="">
+                                        <strong> LIVEWIRE </strong></a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Area End -->
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal modal-2 fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> <i
+                            class="pe-7s-close"></i></button>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12 col-xs-12 mb-lm-30px mb-md-30px mb-sm-30px">
+                            <!-- Swiper -->
+                            <div class="swiper-container gallery-top">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/zoom-image/1.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/zoom-image/2.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/zoom-image/3.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/zoom-image/4.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/zoom-image/5.webp' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-container gallery-thumbs mt-20px slider-nav-style-1 small-nav">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/small-image/1.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/small-image/2.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/small-image/3.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/small-image/4.webp' %}" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img class="img-responsive m-auto"
+                                            src="{% static 'assets/images/product-image/small-image/5.webp' %}" alt="">
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-buttons">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="product-details-content quickview-content">
+                                <h2>Modern Smart Phone</h2>
+                                <div class="pricing-meta">
+                                    <ul class="d-flex">
+                                        <li class="new-price">$20.90</li>
+                                    </ul>
+                                </div>
+                                <div class="pro-details-rating-wrap">
+                                    <div class="rating-product">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <span class="read-review"><a class="reviews" href="#">( 2 Review )</a></span>
+                                </div>
+                                <p class="mt-30px">Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmll
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mill veniam, quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip exet commodo consequat. Duis
+                                    aute irure dolor</p>
+                                <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                    <span>SKU:</span>
+                                    <ul class="d-flex">
+                                        <li>
+                                            <a href="#">Ch-256xl</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                    <span>Categories: </span>
+                                    <ul class="d-flex">
+                                        <li>
+                                            <a href="#">Smart Device, </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ETC</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pro-details-categories-info pro-details-same-style d-flex m-0">
+                                    <span>Tags: </span>
+                                    <ul class="d-flex">
+                                        <li>
+                                            <a href="#">Smart Device, </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Phone</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pro-details-quality">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                                    </div>
+                                    <div class="pro-details-cart">
+                                        <button class="add-cart"> Add To
+                                            Cart</button>
+                                    </div>
+                                    <div class="pro-details-compare-wishlist pro-details-wishlist ">
+                                        <a href="wishlist.html"><i class="pe-7s-like"></i></a>
+                                    </div>
+                                </div>
+                                <div class="payment-img">
+                                    <a href="#"><img src="{% static 'assets/images/icons/payment.png' %}" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <!-- Modal Cart -->
+    <div class="modal customize-class fade" id="exampleModal-Cart" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="pe-7s-close"></i></button>
+                    <div class="tt-modal-messages">
+                        <i class="pe-7s-check"></i> Added to cart successfully!
+                    </div>
+                    <div class="tt-modal-product">
+                        <div class="tt-img">
+                            <img src="{% static 'assets/images/product-image/1.webp' %}" alt="Modern Smart Phone">
+                        </div>
+                        <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal wishlist -->
+    <div class="modal customize-class fade" id="exampleModal-Wishlist" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="pe-7s-close"></i></button>
+                    <div class="tt-modal-messages">
+                        <i class="pe-7s-check"></i> Added to Wishlist successfully!
+                    </div>
+                    <div class="tt-modal-product">
+                        <div class="tt-img">
+                            <img src="{% static 'assets/images/product-image/1.webp' %}" alt="Modern Smart Phone">
+                        </div>
+                        <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal compare -->
+    <div class="modal customize-class fade" id="exampleModal-Compare" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="pe-7s-close"></i></button>
+                    <div class="tt-modal-messages">
+                        <i class="pe-7s-check"></i> Added to compare successfully!
+                    </div>
+                    <div class="tt-modal-product">
+                        <div class="tt-img">
+                            <img src="{% static 'assets/images/product-image/1.webp' %}" alt="Modern Smart Phone">
+                        </div>
+                        <h2 class="tt-title"><a href="#">Modern Smart Phone</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Global Vendor, plugins JS -->
+    <!-- JS Files
+    ============================================ -->
+    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.2.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/modernizr-3.11.2.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/scrollUp.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/venobox.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins/mailchimp-ajax.js' %}"></script>
+
+    <!-- Minify Version -->
+    <script src="{% static 'assets/js/vendor.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugins.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.min.js' %}"></script>
+
+    <!--Main JS (Common Activation Codes)-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from template.hasthemes.com/hmart/hmart/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 15 Sep 2021 18:03:57 GMT -->
+
+</html>
